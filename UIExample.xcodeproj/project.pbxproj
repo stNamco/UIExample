@@ -20,6 +20,7 @@
 		03C86B40246AE60F008DA080 /* UIComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 03C86B30246AE60E008DA080 /* UIComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03C86B43246AE60F008DA080 /* UIComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C86B2E246AE60E008DA080 /* UIComponent.framework */; };
 		03C86B44246AE60F008DA080 /* UIComponent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03C86B2E246AE60E008DA080 /* UIComponent.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03C86B4E246AE6B5008DA080 /* HogeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C86B4D246AE6B5008DA080 /* HogeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		03C86B36246AE60F008DA080 /* UIComponentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIComponentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C86B3D246AE60F008DA080 /* UIComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponentTests.swift; sourceTree = "<group>"; };
 		03C86B3F246AE60F008DA080 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03C86B4D246AE6B5008DA080 /* HogeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HogeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				03C86B30246AE60E008DA080 /* UIComponent.h */,
+				03C86B4C246AE68E008DA080 /* HogeView */,
 				03C86B31246AE60E008DA080 /* Info.plist */,
 			);
 			path = UIComponent;
@@ -218,6 +221,14 @@
 				03C86B3F246AE60F008DA080 /* Info.plist */,
 			);
 			path = UIComponentTests;
+			sourceTree = "<group>";
+		};
+		03C86B4C246AE68E008DA080 /* HogeView */ = {
+			isa = PBXGroup;
+			children = (
+				03C86B4D246AE6B5008DA080 /* HogeView.swift */,
+			);
+			path = HogeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +360,7 @@
 					};
 					03C86B2D246AE60E008DA080 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					03C86B35246AE60F008DA080 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -450,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C86B4E246AE6B5008DA080 /* HogeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +633,7 @@
 		03C86B21246AE2D4008DA080 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UIExample/Preview Content\"";
@@ -640,6 +654,7 @@
 		03C86B22246AE2D4008DA080 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UIExample/Preview Content\"";
@@ -744,6 +759,7 @@
 		03C86B46246AE60F008DA080 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -761,6 +777,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.namco.UIComponent;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -771,6 +788,7 @@
 		03C86B47246AE60F008DA080 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
