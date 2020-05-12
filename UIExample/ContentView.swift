@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UIComponent
 
 private let dateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
