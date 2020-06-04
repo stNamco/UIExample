@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03631BA9248883AC00B248E4 /* ChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03631BA8248883AC00B248E4 /* ChildView.swift */; };
+		03631BAB2488914F00B248E4 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03631BAA2488914F00B248E4 /* BookView.swift */; };
 		0394DD02247D3EEB004C2CFD /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0394DD01247D3EEB004C2CFD /* SnapshotTesting.framework */; };
 		03C86AFA246AE2D2008DA080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C86AF9246AE2D2008DA080 /* AppDelegate.swift */; };
 		03C86AFC246AE2D2008DA080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C86AFB246AE2D2008DA080 /* SceneDelegate.swift */; };
@@ -79,6 +80,7 @@
 
 /* Begin PBXFileReference section */
 		03631BA8248883AC00B248E4 /* ChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildView.swift; sourceTree = "<group>"; };
+		03631BAA2488914F00B248E4 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		0394DD01247D3EEB004C2CFD /* SnapshotTesting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapshotTesting.framework; path = Carthage/Build/iOS/SnapshotTesting.framework; sourceTree = "<group>"; };
 		03C86AF6246AE2D2008DA080 /* UIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C86AF9246AE2D2008DA080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				03C86AFB246AE2D2008DA080 /* SceneDelegate.swift */,
 				03C86AFD246AE2D2008DA080 /* ContentView.swift */,
 				03631BA8248883AC00B248E4 /* ChildView.swift */,
+				03631BAA2488914F00B248E4 /* BookView.swift */,
 				03C86AFF246AE2D4008DA080 /* Assets.xcassets */,
 				03C86B04246AE2D4008DA080 /* LaunchScreen.storyboard */,
 				03C86B07246AE2D4008DA080 /* Info.plist */,
@@ -477,6 +480,7 @@
 				03631BA9248883AC00B248E4 /* ChildView.swift in Sources */,
 				03C86AFC246AE2D2008DA080 /* SceneDelegate.swift in Sources */,
 				03C86AFE246AE2D2008DA080 /* ContentView.swift in Sources */,
+				03631BAB2488914F00B248E4 /* BookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

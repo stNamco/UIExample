@@ -33,9 +33,6 @@ struct ContentView: View {
                         Image(systemName: "plus")
                     }
                 )
-            DetailView()
-            ChildView()
-                .navigationBarTitle(Text("Child"))
         }.navigationViewStyle(DoubleColumnNavigationViewStyle())
     }
 }
@@ -63,8 +60,11 @@ struct DetailView: View {
     var selectedDate: Date?
 
     var body: some View {
-        VStack {
+        VStack(spacing: 40) {
             Text("SubTitle")
+            NavigationLink(destination: ChildView(), label: {
+                Text("Test")
+            })
             HStack(spacing: 30) {
                 Text("ABC")
                 Text("アイウエオ")
@@ -74,7 +74,7 @@ struct DetailView: View {
             ZStack {
                 Text("TestCustomView").zIndex(1)
                 UIComponent.HogeView()
-                }.frame(width: 400, height: 100)
+                }.frame(width: 400, height: 400)
             Group {
                 if selectedDate != nil {
                     Text("\(selectedDate!, formatter: dateFormatter)")
