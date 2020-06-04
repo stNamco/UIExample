@@ -58,12 +58,13 @@ struct MasterView: View {
 
 struct DetailView: View {
     var selectedDate: Date?
+    let bookStore = BookStore()
 
     var body: some View {
         VStack(spacing: 40) {
             Text("SubTitle")
-            NavigationLink(destination: ChildView(), label: {
-                Text("Test")
+            NavigationLink(destination: SecondBookContentView().environmentObject(bookStore), label: {
+                Text("BookView")
             })
             HStack(spacing: 30) {
                 Text("ABC")
@@ -74,17 +75,22 @@ struct DetailView: View {
             ZStack {
                 Text("TestCustomView").zIndex(1)
                 UIComponent.HogeView()
-                }.frame(width: 400, height: 400)
+            }.frame(width: 400, height: 400)
             Group {
                 if selectedDate != nil {
                     Text("\(selectedDate!, formatter: dateFormatter)")
                 } else {
                     Text("Detail view content goes here")
                 }
-                }.background(Color.gray).offset(x: 40, y: 0)
-        }.navigationBarTitle(Text("Detail")).navigationBarItems(trailing: NavigationLink(destination: ChildView(), label: {
+            }.background(Color.gray).offset(x: 40, y: 0)
+        }
+        .navigationBarTitle(Text("Detail"))
+        .navigationBarItems(trailing: NavigationLink(destination: ChildView(), label: {
             Text("Test")
-        }))
+        })).onAppear {
+            print("appeared")
+            self.bookStore.fetch(id: 1)
+        }
     }
 
     var shareButton: some View {
