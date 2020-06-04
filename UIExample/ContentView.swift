@@ -72,15 +72,15 @@ struct DetailView: View {
             ZStack {
                 Text("TestCustomView").zIndex(1)
                 UIComponent.HogeView()
-            }
+                }.frame(width: 400, height: 100)
             Group {
                 if selectedDate != nil {
                     Text("\(selectedDate!, formatter: dateFormatter)")
                 } else {
                     Text("Detail view content goes here")
                 }
-            }.navigationBarTitle(Text("Detail"))
-        }
+            }.background(Color.gray)
+        }.navigationBarTitle(Text("Detail"))
     }
 }
 
