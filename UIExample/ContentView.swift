@@ -34,6 +34,8 @@ struct ContentView: View {
                     }
                 )
             DetailView()
+            ChildView()
+                .navigationBarTitle(Text("Child"))
         }.navigationViewStyle(DoubleColumnNavigationViewStyle())
     }
 }
@@ -79,8 +81,16 @@ struct DetailView: View {
                 } else {
                     Text("Detail view content goes here")
                 }
-            }.background(Color.gray)
-        }.navigationBarTitle(Text("Detail"))
+                }.background(Color.gray).offset(x: 40, y: 0)
+        }.navigationBarTitle(Text("Detail")).navigationBarItems(trailing: shareButton)
+    }
+
+    var shareButton: some View {
+        Button(action: {
+            print("Button Tapped")
+        }){
+            Text("Button")
+        }
     }
 }
 
