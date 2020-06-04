@@ -48,6 +48,7 @@ struct MasterView: View {
                     destination: DetailView(selectedDate: date)
                 ) {
                     Text("\(date, formatter: dateFormatter)")
+                        .foregroundColor(.blue)
                 }
             }.onDelete { indices in
                 indices.forEach { self.dates.remove(at: $0) }
@@ -60,13 +61,17 @@ struct DetailView: View {
     var selectedDate: Date?
 
     var body: some View {
-        Group {
-            if selectedDate != nil {
-                Text("\(selectedDate!, formatter: dateFormatter)")
-            } else {
-                Text("Detail view content goes here")
-            }
-        }.navigationBarTitle(Text("Detail"))
+        VStack {
+            Text("SubTitle")
+            UIComponent.HogeView()
+            Group {
+                if selectedDate != nil {
+                    Text("\(selectedDate!, formatter: dateFormatter)")
+                } else {
+                    Text("Detail view content goes here")
+                }
+            }.navigationBarTitle(Text("Detail"))
+        }
     }
 }
 
