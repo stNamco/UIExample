@@ -82,7 +82,9 @@ struct DetailView: View {
                     Text("Detail view content goes here")
                 }
                 }.background(Color.gray).offset(x: 40, y: 0)
-        }.navigationBarTitle(Text("Detail")).navigationBarItems(trailing: shareButton)
+        }.navigationBarTitle(Text("Detail")).navigationBarItems(trailing: NavigationLink(destination: ChildView(), label: {
+            Text("Test")
+        }))
     }
 
     var shareButton: some View {
