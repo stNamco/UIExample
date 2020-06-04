@@ -19,21 +19,28 @@ private let dateFormatter: DateFormatter = {
 struct ContentView: View {
     @State private var dates = [Date]()
 
+//    var body: some View {
+//        NavigationView {
+//            MasterView(dates: $dates)
+//                .navigationBarTitle(Text("Master"))
+//                .navigationBarItems(
+//                    leading: EditButton(),
+//                    trailing: Button(
+//                        action: {
+//                            withAnimation { self.dates.insert(Date(), at: 0) }
+//                        }
+//                    ) {
+//                        Image(systemName: "plus")
+//                    }
+//                )
+//        }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+//    }
+
     var body: some View {
-        NavigationView {
-            MasterView(dates: $dates)
-                .navigationBarTitle(Text("Master"))
-                .navigationBarItems(
-                    leading: EditButton(),
-                    trailing: Button(
-                        action: {
-                            withAnimation { self.dates.insert(Date(), at: 0) }
-                        }
-                    ) {
-                        Image(systemName: "plus")
-                    }
-                )
-        }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+        VStack {
+            UIComponent.HogeView()
+            UIComponent.ActivityIndicatorView()
+        }
     }
 }
 
