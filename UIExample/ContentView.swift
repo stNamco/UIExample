@@ -18,6 +18,7 @@ private let dateFormatter: DateFormatter = {
 
 struct ContentView: View {
     @State private var dates = [Date]()
+    @State var isModal: Bool = false
 
 //    var body: some View {
 //        NavigationView {
@@ -40,6 +41,14 @@ struct ContentView: View {
         VStack {
             UIComponent.HogeView()
             UIComponent.ActivityIndicatorView()
+
+            Button("Sheet", action: {
+                self.isModal = true
+            }).sheet(isPresented: $isModal, onDismiss: {
+                self.isModal = false
+            }, content: {
+                UIComponent.ActivityViewController()
+            })
         }
     }
 }
