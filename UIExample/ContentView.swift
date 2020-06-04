@@ -66,8 +66,13 @@ struct DetailView: View {
             HStack(spacing: 30) {
                 Text("ABC")
                 Text("アイウエオ")
+                Text("アボガドトースト").layoutPriority(1)
+                Text("アーモンドバタートースト")
             }
-            UIComponent.HogeView()
+            ZStack {
+                Text("TestCustomView").zIndex(1)
+                UIComponent.HogeView()
+            }
             Group {
                 if selectedDate != nil {
                     Text("\(selectedDate!, formatter: dateFormatter)")
@@ -78,7 +83,6 @@ struct DetailView: View {
         }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
