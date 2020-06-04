@@ -33,7 +33,7 @@ struct SecondBookContentView: View {
     @EnvironmentObject var bookStore: BookStore
 
     var body: AnyView {
-        bookStore.isLoading ? AnyView(Text("isLoading")) : AnyView(BookView())
+        return bookStore.isLoading ? AnyView(Text("isLoading")) : AnyView(BookView())
     }
 }
 
@@ -59,13 +59,15 @@ struct BookView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    //                    self.isFavorite.toggle()
+//                    self.$bookStore.isFavorite.toggle()
+
                 }){
                     Text("Button").foregroundColor(.white).bold()
                 }
             }
             Text(book.title).lineLimit(2)
             Text(book.author)
+            Circle().frame(width: 40)
             Spacer(minLength: 10)
         }.padding(20).frame(width: 310, height: 300)
 
@@ -74,9 +76,11 @@ struct BookView: View {
 }
 
 struct BookContentView_Previews: PreviewProvider {
+
     static var previews: some View {
 //        BookContentView()
-        SecondBookContentView()
+        let store = BookStore()
+        return SecondBookContentView().environmentObject(store)
     }
 }
 
