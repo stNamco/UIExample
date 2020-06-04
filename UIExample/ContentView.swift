@@ -63,6 +63,10 @@ struct DetailView: View {
     var body: some View {
         VStack {
             Text("SubTitle")
+            HStack(spacing: 30) {
+                Text("ABC")
+                Text("アイウエオ")
+            }
             UIComponent.HogeView()
             Group {
                 if selectedDate != nil {
